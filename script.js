@@ -32,11 +32,13 @@ computeBtn.addEventListener('click', (e) => {
 })
 
 // Updates rate if mouse wheel is:
-// on pull deltaY is + value, lower rate by 1
-// on push deltaY is - value, increase rate by 1
+// on pull deltaY is + value, lower rate by 0.5
+// on push deltaY is - value, increase rate by 0.5
 // Update rate text
 rate.addEventListener('wheel', (WheelEvent) => {
-    WheelEvent.deltaY > 0 ? rate.value-- : rate.value++;
+    let currRate = parseFloat(rate.value)
+    console.log(currRate);
+    WheelEvent.deltaY > 0 ? rate.value = currRate - 0.5 : rate.value = currRate + 0.5;
     rateText.innerText = `${rate.value} %`
 })
 // Update rate text on mouse drag
