@@ -1,4 +1,45 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+header {
+  color: rgb(128, 128, 128);
+  margin: 20px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+}
 
+#interest-form {
+  display: flex;
+  flex-direction: column;
+}
 
+.field {
+  display: flex;
+  margin: 5px 0;
+  /* justify-content: space-between; */
+}
+
+.field > label {
+  width: 100px;
+}
+
+.field > input {
+  width: 150px;
+}
+
+#compute-btn {
+  width: 120px;
+  margin: 10px 0;
+}
+
+footer {
+  margin: 20px 20px;
+}
+
+.result-text {
+  background-color: yellow;
+}
