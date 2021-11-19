@@ -9,7 +9,11 @@ const computeBtn = document.getElementById("compute-btn");
 // Functions
 function compute() {
     const amount = parseFloat(principal.value);
-    if (isNaN(amount)) { return window.alert("Please enter amount!") }
+    if (isNaN(amount) || amount <= 0) {
+        window.alert("Please enter a positive number!")
+        principal.focus()
+        return
+    }
     const intRate = rate.value;
     const termYears = years.value;
     const intAmount = amount * intRate / 100 * termYears;

@@ -2,13 +2,13 @@
   <head>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <title>Web App – Simple Interest Calculator</title>
   </head>
   <body>
-    <header>
-      <h1>Simple Interest Calculator</h1>
-    </header>
-
     <section class="container">
+      <header>
+        <h1>Simple Interest Calculator</h1>
+      </header>
       <form id="interest-form" action="">
         <div class="field">
           <label for="principal">Amount</label>
@@ -20,12 +20,12 @@
             name="rate"
             type="range"
             id="rate"
-            min="0"
+            min="1"
             max="20"
-            value="0"
+            value="1"
             step="0.5"
           />
-          <span id="rate-text"></span>
+          <span id="rate-text">1%</span>
         </div>
         <div class="field">
           <label for="years">No. of Years</label>
@@ -46,7 +46,7 @@
         <button id="compute-btn" class="btn">Compute Interest</button>
         <span id="result"></span>
       </form>
+      <footer>&copy; Everyone Can Get Rich</footer>
     </section>
-    <footer>&copy; Everyone Can Get Rich</footer>
   </body>
 </html>
